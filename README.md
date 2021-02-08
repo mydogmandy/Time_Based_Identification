@@ -1,7 +1,7 @@
 # Time Based Identification
 
-[Initial Data Link  ](https://drive.google.com/file/d/1h3tAEjL8bKB7BtAA86EeeXlxBFUhopkM/view?usp=sharing)
-[  Python Code Link](src="shell.py)
+[*Initial Data Link](https://drive.google.com/file/d/1h3tAEjL8bKB7BtAA86EeeXlxBFUhopkM/view?usp=sharing)
+[*Python Code Link](src="shell.py)
 <img align="left" src="Initial_DataFrame.png" width="300"/>
 
 <h3 align="center">My project demonstrates my ability to utilize Python, SQLite, Matplotlib, and Seaborn to create unique visuals to better highlight improvement opportunities not currently explored.</h3>
@@ -10,7 +10,7 @@
 
 <p align="center">The app takes in user inputs to select date ranges via SQL, shifts, exception catagories, and service levels to return totals visualized over an entire 24 hour day:</p>
 
-<img src="plots/1_stacked_LTC_hour.jpg" width="600"/>
+<img align="center" src="plots/1_stacked_LTC_hour.jpg" width="600"/>
 
 <h2 align="left"> Further exploration with exception-level breakouts and totals by day of the week: </h2>
 
