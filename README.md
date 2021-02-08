@@ -1,6 +1,5 @@
 # Time Based Identification
 
-[*Initial Data Link](https://drive.google.com/file/d/1h3tAEjL8bKB7BtAA86EeeXlxBFUhopkM/view?usp=sharing)
 [*Python Code Link](https://github.com/mydogmandy/Time_Based_Identification/blob/main/shell.py)
 <img align="left" src="Initial_DataFrame.png" width="300"/>
 
