@@ -1,7 +1,7 @@
 # Time Based Identification
 
 [*Initial Data Link](https://drive.google.com/file/d/1h3tAEjL8bKB7BtAA86EeeXlxBFUhopkM/view?usp=sharing)
-[*Python Code Link](src="shell.py)
+[*Python Code Link](https://github.com/mydogmandy/Time_Based_Identification/blob/main/shell.py)
 <img align="left" src="Initial_DataFrame.png" width="300"/>
 
 <h3 align="center">My project demonstrates my ability to utilize Python, SQLite, Matplotlib, and Seaborn to create unique visuals to better highlight improvement opportunities not currently explored.</h3>
