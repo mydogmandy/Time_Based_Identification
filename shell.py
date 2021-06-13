@@ -2,6 +2,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+import os
+
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.automap import automap_base
@@ -157,12 +159,16 @@ session = Session(engine)
 # QUERY DATA FOR DATE RANGES
 
 # Filter start & end:
-SET1_SD = input('Enter 1ST SET start date (YYYY-mm-dd)')
-SET1_ED = input('Enter 1ST SET end date (YYYY-mm-dd)')
+SET1_SD = input('Enter 1ST SET start date (YYYY-mm-dd)*\n* or press enter for default date 2019-07-02')\
+or '2019-07-02'
+SET1_ED = input('Enter 1ST SET end date (YYYY-mm-dd)*\n* or press enter for default date 2019-07-05')\
+or '2019-07-05'
 
 # Comparison start & end
-SET2_SD = input('Enter 2ND SET start date (YYYY-mm-dd)')
-SET2_ED = input('Enter 2ND SET end date (YYYY-mm-dd)')
+SET2_SD = input('Enter 2ND SET start date (YYYY-mm-dd)*\n* or press enter for default date 2019-06-01')\
+or '2019-06-01'
+SET2_ED = input('Enter 2ND SET end date (YYYY-mm-dd)*\n* or press enter for default date 2019-06-10')\
+or '2019-06-10'
 
 # Perform a query to retrieve the main data from the FISHFINDER table:
 from sqlalchemy import cast,Text
@@ -213,7 +219,7 @@ df2['Handled Date'] = pd.to_datetime(df2["Handled Date"]).dt.date
 # CREATE USER INPUTS FOR SEARCH FILTERS
 
 # LTC Center input with defaults set as all locations:
-LTC = list(input('Enter LTC location (ALL CAPS): ').upper().strip().split(','))
+LTC = list(input('Enter LTC location (ALL CAPS): \nPress enter to default to all locations').upper().strip().split(','))
 if LTC == ['']:
     LTC = (list(df1['LTC Center'].unique()))
 
@@ -224,12 +230,12 @@ else:
     LTC0 = (list(df2['LTC Center'].unique()))
 
 # Shift input with defaults set as all shifts:
-SHIFT = list(input('Inbound, Outbound, or Hub (enter one): ').capitalize().strip().split(','))
+SHIFT = list(input('Inbound, Outbound, or Hub (enter one): \nPress enter to default to all shifts').capitalize().strip().split(','))
 if SHIFT == ['']:
     SHIFT = list(df1['Shift'].unique())
 
 # Service input with defaults set as all shifts:
-SERVICE = list(input('PRTY or ECON (enter one): ').upper().strip().split(','))
+SERVICE = list(input('PRTY or ECON (enter one): \nPress enter to default to all services').upper().strip().split(','))
 if SERVICE == ['']:
     SERVICE = list(df1['Service'].unique())
 
